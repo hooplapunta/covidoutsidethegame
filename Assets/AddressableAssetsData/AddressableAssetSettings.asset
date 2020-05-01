@@ -53,7 +53,7 @@ MonoBehaviour:
       - m_Id: e2a85240a48a2184b9fe1ffd5c4ef06e
         m_Value: HostedData/[BuildTarget]
       - m_Id: 2b8be43d6259b66479a487c5d62a5120
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://storage.googleapis.com/covidoutsidethegame.appspot.com
     - m_InheritedParent: 
       m_Id: c6b2e105312934525ba08c6872d9f34a
       m_ProfileName: MacStandalone
@@ -145,6 +145,6 @@ MonoBehaviour:
           m_Data: 2
           m_Key: InstanceId
     m_Settings: {fileID: 11400000}
-    m_NextInstanceId: 3
+    m_NextInstanceId: 4
     m_RegisteredServiceTypeRefs:
     - UnityEditor.AddressableAssets.HostingServices.HttpHostingService, Unity.Addressables.Editor
