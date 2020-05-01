@@ -136,7 +136,8 @@ public class GameState : AState
 
         currentModifier.OnRunStart(this);
 
-        m_IsTutorial = !PlayerData.instance.tutorialDone;
+        m_IsTutorial = false;
+        //m_IsTutorial = !PlayerData.instance.tutorialDone;
         trackManager.isTutorial = m_IsTutorial;
 
         if (m_IsTutorial)

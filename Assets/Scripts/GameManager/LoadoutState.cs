@@ -73,7 +73,8 @@ public class LoadoutState : AState
 
     public override void Enter(AState from)
     {
-        tutorialBlocker.SetActive(!PlayerData.instance.tutorialDone);
+        //tutorialBlocker.SetActive(!PlayerData.instance.tutorialDone);
+        tutorialBlocker.SetActive(false);
         tutorialPrompt.SetActive(false);
 
         inventoryCanvas.gameObject.SetActive(true);
@@ -393,7 +394,8 @@ public class LoadoutState : AState
 
     public void StartGame()
     {
-        if (PlayerData.instance.tutorialDone)
+        if (true)
+        //if (PlayerData.instance.tutorialDone)
         {
             if (PlayerData.instance.ftueLevel == 1)
             {
