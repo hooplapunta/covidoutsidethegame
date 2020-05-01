@@ -31,6 +31,8 @@ public class CharacterInputController : MonoBehaviour
 	public bool isJumping { get { return m_Jumping; } }
 	public bool isSliding { get { return m_Sliding; } }
 
+    public bool isMaskOn { get { return m_MaskOn;  } }
+
 	[Header("Controls")]
 	public float jumpLength = 2.0f;     // Distance jumped
 	public float jumpHeight = 1.2f;
@@ -79,6 +81,8 @@ public class CharacterInputController : MonoBehaviour
     protected int m_CurrentForward = k_StartingForward;
     protected const int k_StartingForward = 0;
 
+    protected bool m_MaskOn = k_StartingMaskOn;
+    protected const bool k_StartingMaskOn = false;
 
     protected void Awake ()
     {
@@ -195,15 +199,19 @@ public class CharacterInputController : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.UpArrow) && TutorialMoveCheck(1))
         {
-            //ChangeUp();
-            Jump();
+            ChangeUp();
+            //Jump();
         }
 		else if (Input.GetKeyDown(KeyCode.DownArrow) && TutorialMoveCheck(2))
 		{
             //if(!m_Sliding)
-            	Slide();
-            //ChangeDown();
+            	//Slide();
+            ChangeDown();
 		}
+        else if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        {
+            m_MaskOn = !m_MaskOn;
+        }
 #else
         // Use touch input on mobile
         if (Input.touchCount == 1)

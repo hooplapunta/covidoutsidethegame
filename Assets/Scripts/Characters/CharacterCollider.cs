@@ -127,6 +127,12 @@ public class CharacterCollider : MonoBehaviour
             if (m_Invincible || controller.IsCheatInvincible())
                 return;
 
+            // mask mode allows avoiding all lane obstacle
+            if (c.gameObject.GetComponent<AllLaneObstacle>() != null && controller.isMaskOn)
+            {
+                return;
+            }
+
             controller.StopMoving();
 
 			c.enabled = false;
