@@ -76,6 +76,10 @@ public class CharacterInputController : MonoBehaviour
     protected const float k_TrackSpeedToJumpAnimSpeedRatio = 0.6f;
     protected const float k_TrackSpeedToSlideAnimSpeedRatio = 0.9f;
 
+    protected int m_CurrentForward = k_StartingForward;
+    protected const int k_StartingForward = 0;
+
+
     protected void Awake ()
     {
         m_Premium = 0;
@@ -191,12 +195,14 @@ public class CharacterInputController : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.UpArrow) && TutorialMoveCheck(1))
         {
+            //ChangeUp();
             Jump();
         }
 		else if (Input.GetKeyDown(KeyCode.DownArrow) && TutorialMoveCheck(2))
 		{
-			if(!m_Sliding)
-				Slide();
+            //if(!m_Sliding)
+            	Slide();
+            //ChangeDown();
 		}
 #else
         // Use touch input on mobile
@@ -391,6 +397,30 @@ public class CharacterInputController : MonoBehaviour
 
         m_CurrentLane = targetLane;
         m_TargetPosition = new Vector3((m_CurrentLane - 1) * trackManager.laneOffset, 0, 0);
+    }
+
+    public void ChangeUp()
+    {
+        if (!m_IsRunning)
+            return;
+
+        if (m_CurrentForward < 3)
+        {
+            m_TargetPosition = m_TargetPosition + new Vector3(0, 0, 1);
+            m_CurrentForward++;
+        }
+    }
+
+    public void ChangeDown()
+    {
+        if (!m_IsRunning)
+            return;
+
+        if (m_CurrentForward > 0)
+        {
+            m_TargetPosition = m_TargetPosition - new Vector3(0, 0, 1);
+            m_CurrentForward--;
+        }
     }
 
     public void UseInventory()
