@@ -83,6 +83,7 @@ public class CharacterInputController : MonoBehaviour
 
     protected bool m_MaskOn = k_StartingMaskOn;
     protected const bool k_StartingMaskOn = false;
+    protected float m_OldLaneChangeSpeed = 1.0f;
 
     protected void Awake ()
     {
@@ -211,6 +212,15 @@ public class CharacterInputController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             m_MaskOn = !m_MaskOn;
+            if (m_MaskOn)
+            {
+                m_OldLaneChangeSpeed = laneChangeSpeed;
+                laneChangeSpeed = laneChangeSpeed / 4;
+            } 
+            else
+            {
+                laneChangeSpeed = m_OldLaneChangeSpeed;
+            }
         }
 #else
         // Use touch input on mobile
