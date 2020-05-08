@@ -215,7 +215,7 @@ public class CharacterInputController : MonoBehaviour
             if (m_MaskOn)
             {
                 m_OldLaneChangeSpeed = laneChangeSpeed;
-                laneChangeSpeed = laneChangeSpeed / 4;
+                laneChangeSpeed = laneChangeSpeed / 8;
             } 
             else
             {

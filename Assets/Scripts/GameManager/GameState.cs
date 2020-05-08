@@ -64,6 +64,10 @@ public class GameState : AState
 #endif
     public bool adsRewarded = true;
 
+
+    public Text maskText;
+
+
     protected bool m_Finished;
     protected float m_TimeSinceStart;
     protected List<PowerupIcon> m_PowerupIcons = new List<PowerupIcon>();
@@ -335,6 +339,9 @@ public class GameState : AState
     {
         coinText.text = trackManager.characterController.coins.ToString();
         premiumText.text = trackManager.characterController.premium.ToString();
+
+        maskText.text = trackManager.characterController.isMaskOn ? "ON" : "OFF";
+           
 
 		for (int i = 0; i < 3; ++i)
 		{

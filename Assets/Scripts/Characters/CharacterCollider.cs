@@ -128,7 +128,7 @@ public class CharacterCollider : MonoBehaviour
                 return;
 
             // mask mode allows avoiding all lane obstacle
-            if (c.gameObject.GetComponent<AllLaneObstacle>() != null && controller.isMaskOn)
+            if ((c.gameObject.GetComponent<AllLaneObstacle>() != null || c.gameObject.GetComponent<TimedAllLaneObstacle>() != null) && controller.isMaskOn)
             {
                 return;
             }
