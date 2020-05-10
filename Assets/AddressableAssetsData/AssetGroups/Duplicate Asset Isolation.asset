@@ -29,6 +29,10 @@ MonoBehaviour:
     m_Address: Assets/Sounds/SFX/TrafficCone.ogg
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0f2446e0bad36f541919aa1896e8f53f
+    m_Address: Assets/Sounds/SFX/splat.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 10e8db89de774a84c9cfd9eb0e469ae0
     m_Address: Assets/Materials/Rubbish.mat
     m_ReadOnly: 0
@@ -103,6 +107,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 3dc78b81a4d12bd42bd2c32e62d95511
     m_Address: Assets/Materials/Bin.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4235a55fd566dce439abeb4f7c832aa5
+    m_Address: Assets/Sounds/SFX/whistle.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 46384fcfaae550648892113bcd7e8d4a
@@ -407,6 +415,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: de2c87941c8f76b478910c3c7d526909
     m_Address: Assets/Textures/Graffiti/Graffiti10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e160016cb1defe54da21ff018b47ade9
+    m_Address: Assets/Sounds/SFX/cartoonsplat.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e1a536f74c7ef384a8d7132148ace0c8

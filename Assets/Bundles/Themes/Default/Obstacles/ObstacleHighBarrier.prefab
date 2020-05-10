@@ -153,7 +153,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011769374998}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: bbccc718107e16e4d9e070aa75df5218, type: 3}
   m_Animations:
@@ -180,7 +180,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fe64683f265fd4fad4382e187517e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactedSound: {fileID: 8300000, guid: 9ed08397b3fef21418662ed63130d301, type: 3}
+  impactedSound: {fileID: 8300000, guid: e160016cb1defe54da21ff018b47ade9, type: 3}
   visual: {fileID: 4271824663350538316}
   text: {fileID: 153747515553072056}
 --- !u!1 &4271824663350538316
